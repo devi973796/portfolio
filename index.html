@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Togaru Devi Portfolio</title>
 
@@ -9,159 +9,164 @@
 
 <style>
 
-/* RESET */
+/* BASE */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
     font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#0b1220;
+    background:linear-gradient(135deg,#eef2ff,#fdf2f8);
+    color:#111;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    padding:12px;
+    z-index:1000;
+}
+
+nav a{
+    text-decoration:none;
+    color:#4f46e5;
+    font-weight:600;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:120px 20px 80px;
+    background:linear-gradient(135deg,#6366f1,#a855f7);
     color:white;
 }
 
-/* HEADER FIXED */
-header{
-    text-align:center;
-    padding:100px 20px 70px;  /* FIXED spacing */
-    background:linear-gradient(135deg,#4f46e5,#9333ea);
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-
-/* PROFILE IMAGE FIXED */
 .profile{
     width:150px;
     height:150px;
     border-radius:50%;
-    border:4px solid white;
     object-fit:cover;
-
-    margin-top:15px;   /* IMPORTANT FIX */
-    transition:0.3s;
+    border:5px solid white;
+    margin-bottom:15px;
 }
 
-.profile:hover{
-    transform:scale(1.05);
-}
-
-/* NAME */
-h1{
-    margin-top:15px;
-    font-size:30px;
-}
-
-.role{
-    color:#e5e7eb;
-    margin-top:5px;
-}
-
-/* CONTAINER */
+/* SECTION */
 section{
     max-width:1000px;
     margin:auto;
-    padding:40px 20px;
+    padding:60px 20px;
 }
 
 /* CARD */
 .card{
-    background:#111827;
+    background:rgba(255,255,255,0.75);
+    backdrop-filter: blur(10px);
+    border-radius:16px;
     padding:25px;
     margin:20px 0;
-    border-radius:15px;
-    border:1px solid #1f2937;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border-color:#4f46e5;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
 /* SKILLS */
 .skills span{
     display:inline-block;
-    background:#1f2937;
+    background:#eef2ff;
     padding:8px 14px;
     margin:5px;
     border-radius:20px;
+    color:#4f46e5;
 }
 
 /* PROJECT */
 .project{
-    background:#0f172a;
+    background:#f8fafc;
     padding:15px;
     margin-top:15px;
-    border-radius:10px;
-    border-left:4px solid #4f46e5;
+    border-radius:12px;
+    border-left:5px solid #6366f1;
 }
 
 .project a{
     display:inline-block;
     margin-top:10px;
     padding:8px 12px;
-    background:#4f46e5;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-}
-
-/* EDUCATION */
-.edu-box{
-    background:#0f172a;
-    padding:15px;
-    margin:10px 0;
-    border-radius:10px;
-    border-left:4px solid #9333ea;
-}
-
-/* LINKS */
-.links a{
-    display:inline-block;
-    margin:5px;
-    padding:8px 12px;
-    background:#1f2937;
+    background:#6366f1;
     color:white;
     text-decoration:none;
     border-radius:8px;
-    transition:0.3s;
 }
 
-.links a:hover{
-    background:#4f46e5;
-}
-
-/* CERT BUTTON */
-.cert-btn{
-    display:inline-block;
+/* EDUCATION */
+.table-box{
     margin-top:15px;
-    padding:12px 18px;
-    background:linear-gradient(135deg,#22c55e,#16a34a);
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#f8fafc;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+th{
+    background:#6366f1;
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #e5e7eb;
+}
+
+tr:hover{
+    background:#eef2ff;
+}
+
+/* LINKS (ALL SAME BLUE) */
+.links{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.links a.btn{
+    display:inline-block;
+    margin:6px;
+    padding:10px 14px;
     color:white;
     text-decoration:none;
-    border-radius:10px;
+    border-radius:8px;
     font-weight:600;
+    background:#6366f1;   /* SAME BLUE FOR ALL */
     transition:0.3s;
-    box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-.cert-btn:hover{
-    transform:scale(1.05);
-    background:linear-gradient(135deg,#16a34a,#15803d);
+.links a.btn:hover{
+    background:#4f46e5;
+    transform:translateY(-3px);
 }
 
 /* FOOTER */
 footer{
     text-align:center;
     padding:20px;
-    background:#020617;
-    margin-top:30px;
-    font-size:14px;
+    background:#111827;
+    color:white;
 }
 
 </style>
@@ -169,137 +174,138 @@ footer{
 
 <body>
 
-<header>
+<!-- NAV -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#projects">Projects</a>
+    <a href="#links">Links</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <!-- PROFILE IMAGE (NO CUTTING FIXED) -->
+<!-- HEADER -->
+<header id="home">
+
     <img src="profile.jpg" class="profile">
 
     <h1>Togaru Devi Naga Durga Lakshmi</h1>
-
-    <p class="role">Roll No: 236K1A05C4</p>
-    <p class="role">Student | Web Developer | AI Enthusiast</p>
+    <p>Roll No: 236K1A05C4</p>
+    <p>Student | Web Developer | AI Enthusiast</p>
 
 </header>
 
 <section>
 
-    <!-- ABOUT -->
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate student interested in software development, web technologies,
-            competitive coding, and innovative projects.
-        </p>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="card">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-            <span>Python</span>
-            <span>Java</span>
-        </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="card">
-        <h2>Education</h2>
-
-        <div class="edu-box">
-            <h3>IDEAL INSTITUTE OF TECHNOLOGY</h3>
-            <p>CSE - 4th Year</p>
-            <p>CGPA: 8.0</p>
-        </div>
-
-        <div class="edu-box">
-            <h3>PRAGATI JUNIOR COLLEGE</h3>
-            <p>MPC</p>
-            <p>90.3%</p>
-        </div>
-
-        <div class="edu-box">
-            <h3>ZP HIGH SCHOOL</h3>
-            <p>SSC</p>
-            <p>CGPA: 9.3</p>
-        </div>
-    </div>
-
-   <div class="card">
-    <h2>Projects</h2>
-
-    <!-- PROJECT 1 -->
-    <div class="project">
-        <h3>AI Resume Shortlisting System</h3>
-
-        <p>
-            The AI Resume Shortlisting System is a web-based application designed to automate the process of screening and ranking resumes based on job requirements. It helps recruiters save time by analyzing multiple resumes and matching them with a given job description.
-        </p>
-
-        <p>
-            The system extracts text from uploaded PDF resumes, identifies relevant skills, and compares them with the job description using an intelligent matching algorithm. It generates a match percentage score and an ATS (Applicant Tracking System) score for each resume, helping in efficient candidate shortlisting.
-        </p>
-
-        <a href="https://ai-resume-shortlisting-89o5.onrender.com" target="_blank">
-            Live Demo
-        </a>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project">
-        <h3>OrderOnTheGo</h3>
-
-        <p>
-            OrderOnTheGo is a full-stack food ordering web application that allows users to browse food items, add them to cart, and place orders online. It provides a simple and responsive interface for a smooth user experience.
-        </p>
-
-        <p>
-            Built using React.js, Node.js, Express.js, and MongoDB, it ensures fast performance and efficient data handling.
-        </p>
-
-        <a href="https://order-on-the-go-nu.vercel.app/" target="_blank">
-            Live Demo
-        </a>
-    </div>
-
+<!-- ABOUT -->
+<div class="card" id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a passionate student interested in software development, web technologies, competitive coding, and innovative projects. I enjoy learning new technologies and building real-world applications.
+    </p>
 </div>
 
-    <!-- CERTIFICATES -->
-    <div class="card">
-        <h2>Certificates</h2>
+<!-- SKILLS -->
+<div class="card" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Python</span>
+        <span>Java</span>
+    </div>
+</div>
 
-        <a href="certificates.pdf" target="_blank" class="cert-btn">
-            📄 View Certificates
-        </a>
+<!-- EDUCATION -->
+<div class="card" id="education">
+    <h2>Education</h2>
+
+    <div class="table-box">
+        <table>
+            <tr>
+                <th>Qualification</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>CGPA / %</th>
+            </tr>
+
+            <tr>
+                <td>B.Tech (CSE)</td>
+                <td>IDEAL INSTITUTE OF TECHNOLOGY</td>
+                <td>2023 - 2027</td>
+                <td>8.0</td>
+            </tr>
+
+            <tr>
+                <td>Intermediate</td>
+                <td>PRAGATI JUNIOR COLLEGE</td>
+                <td>2021 - 2023</td>
+                <td>90.3%</td>
+            </tr>
+
+            <tr>
+                <td>SSC</td>
+                <td>ZP HIGH SCHOOL</td>
+                <td>2021</td>
+                <td>9.3</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="card" id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>AI_Resume_Shortlisting</h3>
+        <p>
+            The AI Resume Shortlisting System is a web-based application designed to automate the process of screening and ranking resumes based on job requirements.
+        </p>
+        <p>
+            It extracts text from uploaded PDF resumes, identifies relevant skills, and compares them with job descriptions using intelligent matching.
+        </p>
+        <a href="https://ai-resume-shortlisting-89o5.onrender.com" target="_blank">Live Demo</a>
     </div>
 
-    <!-- LINKS -->
-    <div class="card">
-        <h2>Profiles</h2>
-
-        <div class="links">
-            <a href="https://leetcode.com/u/Devi_1927/" target="_blank">LeetCode</a>
-            <a href="https://www.linkedin.com/in/devi-thogaru-238a28362" target="_blank">LinkedIn</a>
-            <a href="https://www.codechef.com/users/devi_1927" target="_blank">CodeChef</a>
-            <a href="https://www.hackerrank.com/profile/236K1A05C4" target="_blank">HackerRank</a>
-            <a href="https://github.com/devi973796" target="_blank">GitHub</a>
-        </div>
+    <div class="project">
+        <h3>OrderOnTheGo</h3>
+        <p>
+            Full-stack food ordering web application using React, Node.js, Express, MongoDB.
+        </p>
+        <a href="https://order-on-the-go-nu.vercel.app/" target="_blank">Live Demo</a>
     </div>
+</div>
 
-    <!-- CONTACT -->
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: devithogaru2@gmail.com</p>
-        <p>Phone: 8341878884</p>
-        <p>Location: Gollaprolu, Andhra Pradesh</p>
+<!-- LINKS -->
+<div class="card" id="links">
+    <h2>Profiles & Links</h2>
+
+    <div class="links">
+
+        <a class="btn" href="https://github.com/devi973796" target="_blank">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/devi-thogaru-238a28362" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://leetcode.com/u/Devi_1927/" target="_blank">LeetCode</a>
+        <a class="btn" href="https://www.codechef.com/users/devi_1927" target="_blank">CodeChef</a>
+        <a class="btn" href="https://www.hackerrank.com/profile/236K1A05C4" target="_blank">HackerRank</a>
+
     </div>
+</div>
+
+<!-- CONTACT -->
+<div class="card" id="contact">
+    <h2>Contact</h2>
+    <p>Email: devithogaru2@gmail.com</p>
+    <p>Phone: 8341878884</p>
+    <p>Location: Gollaprolu, Andhra Pradesh</p>
+</div>
 
 </section>
 
 <footer>
-    © 2026 Togaru Devi | Portfolio
+    © 2026 Togaru Devi Portfolio
 </footer>
 
 </body>
