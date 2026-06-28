@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Togaru Devi Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b1220;
+    color:white;
+}
+
+/* HEADER FIXED */
+header{
+    text-align:center;
+    padding:100px 20px 70px;  /* FIXED spacing */
+    background:linear-gradient(135deg,#4f46e5,#9333ea);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+/* PROFILE IMAGE FIXED */
+.profile{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    border:4px solid white;
+    object-fit:cover;
+
+    margin-top:15px;   /* IMPORTANT FIX */
+    transition:0.3s;
+}
+
+.profile:hover{
+    transform:scale(1.05);
+}
+
+/* NAME */
+h1{
+    margin-top:15px;
+    font-size:30px;
+}
+
+.role{
+    color:#e5e7eb;
+    margin-top:5px;
+}
+
+/* CONTAINER */
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* CARD */
+.card{
+    background:#111827;
+    padding:25px;
+    margin:20px 0;
+    border-radius:15px;
+    border:1px solid #1f2937;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#4f46e5;
+}
+
+/* SKILLS */
+.skills span{
+    display:inline-block;
+    background:#1f2937;
+    padding:8px 14px;
+    margin:5px;
+    border-radius:20px;
+}
+
+/* PROJECT */
+.project{
+    background:#0f172a;
+    padding:15px;
+    margin-top:15px;
+    border-radius:10px;
+    border-left:4px solid #4f46e5;
+}
+
+.project a{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 12px;
+    background:#4f46e5;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+/* EDUCATION */
+.edu-box{
+    background:#0f172a;
+    padding:15px;
+    margin:10px 0;
+    border-radius:10px;
+    border-left:4px solid #9333ea;
+}
+
+/* LINKS */
+.links a{
+    display:inline-block;
+    margin:5px;
+    padding:8px 12px;
+    background:#1f2937;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.links a:hover{
+    background:#4f46e5;
+}
+
+/* CERT BUTTON */
+.cert-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 18px;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.cert-btn:hover{
+    transform:scale(1.05);
+    background:linear-gradient(135deg,#16a34a,#15803d);
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
+    margin-top:30px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <!-- PROFILE IMAGE (NO CUTTING FIXED) -->
+    <img src="profile.jpg" class="profile">
+
+    <h1>Togaru Devi Naga Durga Lakshmi</h1>
+
+    <p class="role">Roll No: 236K1A05C4</p>
+    <p class="role">Student | Web Developer | AI Enthusiast</p>
+
+</header>
+
+<section>
+
+    <!-- ABOUT -->
+    <div class="card">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate student interested in software development, web technologies,
+            competitive coding, and innovative projects.
+        </p>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Python</span>
+            <span>Java</span>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="card">
+        <h2>Education</h2>
+
+        <div class="edu-box">
+            <h3>IDEAL INSTITUTE OF TECHNOLOGY</h3>
+            <p>CSE - 4th Year</p>
+            <p>CGPA: 8.0</p>
+        </div>
+
+        <div class="edu-box">
+            <h3>PRAGATI JUNIOR COLLEGE</h3>
+            <p>MPC</p>
+            <p>90.3%</p>
+        </div>
+
+        <div class="edu-box">
+            <h3>ZP HIGH SCHOOL</h3>
+            <p>SSC</p>
+            <p>CGPA: 9.3</p>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="card">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>AI Resume Shortlisting System</h3>
+            <p>
+                The system extracts text from resumes, matches skills, and gives ATS score.
+            </p>
+            <a href="https://ai-resume-shortlisting-89o5.onrender.com" target="_blank">Live Demo</a>
+        </div>
+
+        <div class="project">
+            <h3>OrderOnTheGo</h3>
+            <p>
+                Full-stack food ordering app using React, Node.js, MongoDB.
+            </p>
+            <a href="https://order-on-the-go-nu.vercel.app/" target="_blank">Live Demo</a>
+        </div>
+    </div>
+
+    <!-- CERTIFICATES -->
+    <div class="card">
+        <h2>Certificates</h2>
+
+        <a href="certificates.pdf" target="_blank" class="cert-btn">
+            📄 View Certificates
+        </a>
+    </div>
+
+    <!-- LINKS -->
+    <div class="card">
+        <h2>Profiles</h2>
+
+        <div class="links">
+            <a href="https://leetcode.com/u/Devi_1927/" target="_blank">LeetCode</a>
+            <a href="https://www.linkedin.com/in/devi-thogaru-238a28362" target="_blank">LinkedIn</a>
+            <a href="https://www.codechef.com/users/devi_1927" target="_blank">CodeChef</a>
+            <a href="https://www.hackerrank.com/profile/236K1A05C4" target="_blank">HackerRank</a>
+            <a href="https://github.com/devi973796" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: devithogaru2@gmail.com</p>
+        <p>Phone: 8341878884</p>
+        <p>Location: Gollaprolu, Andhra Pradesh</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Togaru Devi | Portfolio
+</footer>
+
+</body>
+</html>
